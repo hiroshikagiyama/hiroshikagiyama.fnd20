@@ -3,19 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIG 提出練習</title>
+    <title>BAKERY KAGIYAMA</title>
 
+    <!-- css ------------------------------------------------------------------------------------------>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- google font  Noto Sans JP 400 ---------------------------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- ファビコン ----------------------------------------------------------------------------------->
+    <link rel="icon" href="icon/favicon_output.png">
+
+
 </head>
+
 <body>
-    <div>
-        <h1>提出練習！！</h1>
-        <h2>🌈🌈🌈🌈🌈🌈🌈🌈🌈</h2>
-        <button>提出するする</button>
-        <p></p>
-    </div>
+
+        <!-- ヘッダー --------------------------------------------------------------->
+        <header>
+            <div class="header-outer">
+                <div class="header-inner">
+                <div class="header-logo">
+                    <img src="icon/logo_icon_output.png" alt="logo">
+                </div>
+                <p class="header-text">BAKERY KAGIYAMA</p>
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li>
+                            <a href="#page1">Home</a>
+                        </li>
+                        <li>
+                            <a href="#page2">About</a>
+                        </li>
+                        <li>
+                            <a href="#page3">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#">cart</a>
+                        </li>
+                    </ul>
+                </nav>
+                <p id="cart-count">0</p>
+                </div>
+                <div class="small-logo"><img class="small-logo-img"></div>
+            </div>
+            <div id="bar"></div>
+        </header>
 
 
-    <script type="text/javascript" src="script.js"></script>
+        <div class="content-scroll common-x-scroll">
+            <div class="content-flex">
+                <!-- ホームページ -------------------------------------------------------->
+                <div class="content1" id="page1">
+                    <div class="item home">
+                        <div class="home-image"></div>
+                        <div class="home-text">
+                            <p class="home-text-title">BAKERY</p>
+                            <p class="home-text-title">KAGIYAMA</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- サブページ-------------------------------------------------------->
+                <div class="content1 sub" id="page2">
+                    <div class="materials">
+                        <h2>About Materials</h2>
+                        <div class="materials-flex">
+                            <div class="material">
+                                <img class="materials-image" src="images/immo-wegmann-8CYL4WGzSQ4-unsplash.jpg" alt="">
+                                <div class="materials-text">
+                                    Bulbasaur Ivysaur Venusaur<br>
+                                    Charmander Charmeleon Charizard
+                                </div>
+                            </div>
+                            <div class="material">
+                                <img class="materials-image" src="images/jeremy-yap-h3tP-D2eABI-unsplash.jpg" alt="">
+                                <div class="materials-text">
+                                    Squirtle Wartortle Blastoise<br>
+                                    Caterpie Metapod Butterfree
+                                </div>
+                            </div>
+                            <div class="material">
+                                <img class="materials-image" src="images/vincent-m-OVvlXnXlI-M-unsplash.jpg" alt="">
+                                <div class="materials-text">
+                                    Weedle Kakuna Beedrill<br>
+                                    Pidgey Pidgeotto Pidgeot
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- メニュー-------------------------------------------------------->
+                <div class="content1" id="page3">
+                    <!-- <div class="top3-menu"> -->
+                <!-- Top3  ----------------------------------------------------------------------------------->
+                        <div class="top3">
+                            <div class="top3-card">
+                                <p class="ninki">人気 No1</p>
+                                <img class="top3-img" src="images/white_bread_output.png" alt="">
+                                <p class="top3-name">クロワッサン</p>
+                                <p class="top3-price">350円</p>
+                                <div class="counter-button">
+                                    <button class="top3-down" id="top3-down1" type="button">―</button>
+                                    <button class="top3-up" id="top3-up1" type="button">＋</button>
+                                </div>
+                            </div>
+                            <div class="top3-card">
+                                <p class="ninki">人気 No2</p>
+                                <img class="top3-img" src="images/curry_output.png" alt="">
+                                <p class="top3-name">カレーパン</p>
+                                <p class="top3-price">300円</p>
+                                <div class="counter-button">
+                                    <button class="top3-down" id="top3-down2" type="button">―</button>
+                                    <button class="top3-up" id="top3-up2" type="button">＋</button>
+                                </div>
+                            </div>
+                            <div class="top3-card">
+                                <p class="ninki">人気 No3</p>
+                                <img class="top3-img" src="images/cream_output.png" alt="">
+                                <p class="top3-name">クリームパン</p>
+                                <p class="top3-price">250円</p>
+                                <div class="counter-button">
+                                    <button class="top3-down" id="top3-down3" type="button">―</button>
+                                    <button class="top3-up" id="top3-up3" type="button">＋</button>
+                                </div>
+                            </div>
+                        </div>
+                <!-- メニュー --------------------------------------------------------------------->
+                        <div class="menu"></div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <!-- フッター  --------------------------------------------------------------------->
+    <footer>
+        <div class="small-logo"><img></div>
+        <small>© SAYAKA Co. Ltd. 2023</small>
+    </footer>
+    
+    
+    <!-- スクリプト  --------------------------------------------------------------------->
+    <script src="menu.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
