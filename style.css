@@ -1,0 +1,452 @@
+@charset "utf-8";
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-image: url(background/background_image_output.jpg);
+    background-color: #050505;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/* ヘッダー　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.header-outer {
+    /* display: flex;
+    align-items: center; */
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    padding: 0.5vh 15vh 0 15vh;
+}
+
+.header-logo img{
+    height: 50px;
+    display: block;
+    align-items: center;
+}
+
+
+.header-text {
+    /* border: 1px solid #999; */
+    margin-left: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+.header-text:hover {
+    
+    translate: all 2s;
+}
+
+.header-nav {
+    margin-left: auto;
+}
+
+
+.header-list {
+    display: flex;
+    list-style: none;
+    
+}
+
+.header-list > li + li{
+    margin-left: 25px;
+}
+
+.header-list a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+}
+
+.header-list a:hover{
+    color: coral;
+}
+
+#cart-count {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    background-color: #c2c2c2;
+    color: black;
+    border-radius: 50%;
+}
+
+
+.small-logo {
+    background-image: url(icon/header_logo_output.png);
+    background-repeat: repeat space;
+    height: 16px;
+    width: 100%;
+}
+
+/* ホーム=================================== */
+
+
+.content-scroll {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.content-flex {
+    width: 3600px;
+    display: flex;
+    height: 100%;
+}
+
+.content1 {
+    width: 1200px;
+}
+
+.home, .materials, .menu{
+    width: 100%;
+    height: 100%;
+}
+
+
+.item {
+    display: flex;
+    text-align: center;
+}
+
+.home-image {
+    width: 500px;
+    height: 70vh;
+    margin-top: 20vh;
+    margin-left: 10vh;
+    background-image: url(images/annie-spratt-EACvtuV2k2E-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+}
+.home-text {
+    width: 500px;
+    height: 40vh;
+    margin-top: 45vh;
+    margin-left: 20px;
+    font-size: 80px;
+    letter-spacing: 15px;
+    text-align: left;
+}
+
+/* サブページ=================================== */
+.sub {
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.materials{
+    margin: 20vh auto;
+    width: 1000px;
+    height: 70vh;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.materials-flex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.material{
+    height: 45vh;
+    width: 300px;
+    margin: 50px 15px;
+}
+
+
+.materials-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.materials-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* メニュー=================================== */
+/* Top3　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.top3 {
+    margin: 13vh auto 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    height: 190px;
+}
+
+.top3-card {
+    text-align: center;
+    height: 180px;
+    width: 200px;
+
+    margin: 5px 20px;
+    position:relative;
+}
+.counter-button {
+    display: flex;
+}
+
+.top3-up, .top3-down {
+
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+}
+
+.top3-up:active {
+    position: absolute;
+    top: 150px;
+    left: 170px;
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.top3-up {
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 170px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+  }
+
+.top3-down:active {
+    position: absolute;
+    top: 150px;
+    left: 140px;
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.top3-down {
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left: 140px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+  }
+
+
+/* マウスホバー時の操作 ============================== */
+.top3-card:hover .top3-img{
+    height: 190px;
+    transition: all 0.1s ease;
+}
+.top3-card:hover .ninki{
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.1s ease;
+}
+.top3-card:hover .top3-name, .top3-card:hover .top3-price {
+    visibility: hidden;
+}
+.top3-card:hover .top3-up, .top3-card:hover .top3-down {
+    visibility: visible;
+}
+
+/* ================================================= */
+
+
+.ninki {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    transform:rotate(-10deg)
+}
+
+.top3-img {
+    height: 140px;
+}
+
+.top3-name {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top3-price{
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*メニュー　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.menu {
+    /* border: 1px solid #999; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1180px;
+    /* align-content: center; */
+    height: 300px;
+}
+
+.menu-card {
+    margin: 0 5px 0 5px;
+    text-align: center;
+    height: 150px;
+    width: 140px;
+    /* border: 1px solid #999; */
+    position:relative;
+}
+
+.menu-img {
+    height: 110px;
+}
+
+.menu-name {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu-price{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-up, .menu-down {
+    /* border: 1px solid #999; */
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+}
+
+.menu-up:active {
+    position: absolute;
+    top: 120px;
+    left: 110px;
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.menu-up {
+    visibility: hidden;
+    position: absolute;
+    top: 120px;
+    left: 110px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+  }
+
+.menu-down:active {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.menu-down {
+    visibility: hidden;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+  }
+
+/* マウスホバー時の操作 ============================== */
+.menu-card:hover .menu-img{
+    height: 140px;
+    transition: all 0.1s ease;
+}
+.menu-card:hover .menu-name {
+    visibility: hidden;
+}
+.menu-card:hover .menu-price {
+    visibility: hidden;
+}
+.menu-card:hover .menu-up {
+    visibility: visible;
+}
+.menu-card:hover .menu-down {
+    visibility: visible;
+}
+/* ================================================ */
+
+
+
+#bar {
+    background-color: cadetblue;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    height: 10px;
+}
+
+
+
+/* フッター　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+footer {
+    /* border: 1px solid #999; */
+    position: absolute;/*←絶対位置*/
+    bottom: 10px; /*下に固定*/
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #999;
+}
