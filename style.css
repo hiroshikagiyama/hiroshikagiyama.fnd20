@@ -1,0 +1,470 @@
+@charset "utf-8";
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-image: url(images/background/background_image.jpg);
+    background-color: #050505;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+/* ヘッダー　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.header-outer {
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+    padding: 5px 15vh 0 15vh;
+}
+
+.header-logo img{
+    height: 50px;
+    display: block;
+    align-items: center;
+}
+
+
+.header-text {
+    margin-left: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+.header-text:hover {
+    translate: all 2s;
+}
+
+.header-nav {
+    margin-left: auto;
+}
+
+.header-list {
+    display: flex;
+    list-style: none;
+}
+
+.header-list > li + li{
+    margin-left: 25px;
+}
+
+.header-list a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+}
+
+.header-list a:hover{
+    color: coral;
+}
+
+#cart-count, #cart-total-price {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    height: 22px;
+    text-align: center;
+    background-color: #c2c2c2;
+    color: black;
+    border-radius: 5px;
+}
+
+#cart-count {
+    width: 30px;
+}
+
+#cart-total-price {
+    width: 60px;
+}
+
+.small-logo {
+    background-image: url(images/icon/croissant_16.png);
+    background-repeat: repeat space;
+    height: 16px;
+    width: 100%;
+}
+
+#rotation {
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    margin-left: 0;
+    transform: rotate(0deg);
+}
+
+#rotation-image {
+    height: 40px;
+    width: 40px;
+}
+
+
+/* ホーム=================================== */
+
+
+.content-scroll {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.content-flex {
+    width: 3600px;
+    display: flex;
+    height: 100%;
+}
+
+.content1 {
+    height: 100vh;
+    width: 1200px;
+}
+
+.home, .materials, .menu{
+    width: 100%;
+    height: 100%;
+}
+
+
+.item {
+    display: flex;
+    text-align: center;
+}
+
+.home-image {
+    width: 500px;
+    height: 70vh;
+    margin-top: 20vh;
+    margin-left: 10vh;
+    background-image: url(images/main_image.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+}
+.home-text {
+    width: 500px;
+    height: 40vh;
+    margin-top: 45vh;
+    margin-left: 20px;
+    font-size: 80px;
+    letter-spacing: 15px;
+    text-align: left;
+    background-position: center;
+    background-size: 260px;
+}
+
+.home-image,.home-text{
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+@keyframes fadein{
+    from{
+    opacity: 0.1;
+    transform: translatey(20px);
+    }
+    to{
+    opacity: 1;
+    transform: translatey(0);
+    }
+}
+
+
+/* サブページ=================================== */
+.sub {
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.materials{
+    margin: 20vh auto;
+    width: 1000px;
+    height: 70vh;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.materials-flex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.material{
+    height: 45vh;
+    width: 300px;
+    margin: 50px 15px;
+}
+
+
+.materials-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+}
+
+.materials-text {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* メニュー=================================== */
+
+
+/*メニュー　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    max-width: 1200px;
+}
+
+.menu-card {
+    margin: 0 10px;
+    text-align: center;
+    height: 150px;
+    width: 140px;
+    position:relative;
+}
+
+.menu-img {
+    height: 110px;
+}
+
+.menu-img-top3 {
+    height: 160px;
+}
+
+.menu-name {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.menu-name-top3 {
+    top: 135px;
+}
+
+.menu-price{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.menu-price-top3{
+    top: 155px;
+}
+
+.menu-up, .menu-down {
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+    visibility: hidden;
+    position: absolute;
+    top: 140px;
+    text-align: center;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.menu-up {
+    left: 130px;
+}
+
+.menu-down {
+    left: 100px;
+}
+
+.menu-up:active, .menu-down:active {
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* マウスホバー時の操作 ============================== */
+.menu-card:hover .menu-img{
+    height: 160px;
+    transition: all 0.1s ease;
+}
+.menu-card:hover .menu-name {
+    visibility: hidden;
+}
+.menu-card:hover .menu-price {
+    visibility: hidden;
+}
+.menu-card:hover .menu-up {
+    visibility: visible;
+}
+.menu-card:hover .menu-down {
+    visibility: visible;
+}
+/* ================================================ */
+/* Top3　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.top3 {
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    width: 330px;
+    margin: 0 50px 0 0;
+}
+
+.top3-card {
+    text-align: center;
+    height: 180px;
+    width: 200px;
+
+    margin: 5px 20px;
+    position:relative;
+}
+.counter-button {
+    display: flex;
+}
+
+.top3-up, .top3-down {
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 1px 1px 1px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.top3-up {
+    left: 240px;
+}
+
+.top3-down {
+    left: 210px;
+}
+
+.top3-up:active, .top3-down:active {
+    position: absolute;
+    top: 150px;
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.menu-count-top3 {
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    font-size: 25px;
+}
+
+.menu-count-menu {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 20px;
+}
+
+/* マウスホバー時の操作 ============================== */
+.menu-card:hover .menu-img-top3{
+    height: 190px;
+    transition: all 0.1s ease;
+}
+.menu-card:hover .ninki{
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.1s ease;
+}
+.menu-card:hover .menu-name-top3, .menu-card:hover .menu-price-top3 {
+    visibility: hidden;
+}
+.menu-card:hover .top3-up, .menu-card:hover .top3-down {
+    visibility: visible;
+}
+
+/* ================================================= */
+
+
+.ninki {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    transform:rotate(-10deg)
+}
+
+.top3-img {
+    height: 140px;
+}
+
+.top3-name {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.top3-price{
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ------------------------------------------------------- */
+.cart-list {
+    position: absolute;
+    top: 70px;
+    left: 3450px;
+}
+
+/* ------------------------------------------------------- */
+/* #bar {
+    background-color: cadetblue;
+    
+    top: 0;
+    left: 0;
+    height: 10px;
+} */
+
+
+
+/* フッター　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+footer {
+    /* border: 1px solid #999; */
+    position: absolute;/*←絶対位置*/
+    bottom: 10px; /*下に固定*/
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #999;
+}
